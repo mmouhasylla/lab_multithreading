@@ -5,10 +5,10 @@ import numpy as np
 
 
 class Task:
-    def __init__(self, identifier):
+    def __init__(self, identifier, size=None):
         self.identifier = identifier
         # choosee the size of the problem
-        self.size = np.random.randint(300, 3_000)
+        self.size = size or np.random.randint(300, 3000)
         # Generate the input of the problem
         self.a = np.random.rand(self.size, self.size)
         self.b = np.random.rand(self.size)
@@ -21,8 +21,8 @@ class Task:
         self.x = np.linalg.solve(self.a, self.b)
         self.time = time.perf_counter() - start
 
+    # Serialization
     def to_json(self) -> str:
-        # Convertir les attributs NumPy en listes pour la sérialisation
         data = {
             "identifier": self.identifier,
             "size": self.size,
