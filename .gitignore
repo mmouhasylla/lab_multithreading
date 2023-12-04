@@ -3,6 +3,6 @@
 build
 CMakeFiles
 _deps
-src/Makefile
+Makefile
 src/CMakeCache.txt
 src/cmake_install.cmake
