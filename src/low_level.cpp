@@ -5,9 +5,8 @@
 
 int main() {
   // Effectuer une requête GET
-  cpr::Response response =
-      cpr::Get(cpr::Url{"https://jsonplaceholder.typicode.com/todos/1"});
-
+  cpr::Response response = cpr::Get(cpr::Url{"localhost:8000"});
+  std::cout << "Response: " << response.text << std::endl;
   // Vérifier si la requête a réussi (code de statut 200)
   if (response.status_code == 200) {
     // Parser la réponse JSON

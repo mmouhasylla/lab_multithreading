@@ -1,2 +1,8 @@
 .venv
 *.pyc
+build
+CMakeFiles
+_deps
+src/Makefile
+src/CMakeCache.txt
+src/cmake_install.cmake
