@@ -6,3 +6,5 @@ _deps
 Makefile
 src/CMakeCache.txt
 src/cmake_install.cmake
+../.DS_STORE
+.DS_STORE
