@@ -14,7 +14,12 @@ FetchContent_Declare(
   cpr
   DOWNLOAD_EXTRACT_TIMESTAMP OFF
   URL "https://github.com/libcpr/cpr/archive/refs/tags/1.10.4.tar.gz")
-FetchContent_MakeAvailable(json cpr)
+FetchContent_Declare(
+  eigen
+  DOWNLOAD_EXTRACT_TIMESTAMP OFF
+  URL "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz")
+FetchContent_MakeAvailable(json cpr eigen)
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
-target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json cpr::cpr)
+target_link_libraries(${PROJECT_NAME} nlohmann_json::nlohmann_json cpr::cpr
+                      Eigen3::Eigen)
