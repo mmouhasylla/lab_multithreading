@@ -17,8 +17,12 @@ Ce framework, développé en Python et C++, vise à gérer efficacement les tâc
 
 ### Procédure d'Installation
 
-Pour configurer l'environnement, exécutez le script `venv_install.sh` situé dans le répertoire racine du projet :
+Pour activer l'environnement situé dans le répertoire racine du projet :
 
 ```bash
-./setup/venv_install.sh
+source .venv
 ```
+
+#### Etape manquante
+L'executable genere lors de la troisième de TP ne fonctionne pas. Il a été généré avec gcc Apple clang version 15.0.0.
+Toutes les autres fonctionnalités du TP sont opérationels, a part celle en lien avec le cpp.
